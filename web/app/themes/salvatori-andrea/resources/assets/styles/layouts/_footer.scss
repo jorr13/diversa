@@ -1,0 +1,112 @@
+.footer{
+    border-top: 0.5px #23315b solid;
+    background: transparent;
+    color: white;
+    padding: 80px;
+    position: relative;
+
+    .padrefooter{
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .sabermas{
+            padding: 25px 0;
+            position: relative;
+            margin: 0 auto;
+
+            .descrip-sabermas{
+                position: relative;
+                padding-bottom: 15px;
+                letter-spacing: 1px;
+                width: 76%;
+    
+                span{
+                    font-size: $parrafo;
+                }
+     
+            }
+            
+            a{
+                position: relative;
+                background: $azul;
+                border-radius: 20px;
+                font-size: $boton;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 7px 20px;
+            }
+        }
+        .menufooter1{
+            position: relative;
+            padding: 25px 0px;
+            margin: 0 auto;
+
+            ul{
+                li{
+                    padding-bottom: 12px;
+                    font-size: $boton;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .menufooter2{
+            position: relative;
+            padding: 25px 0px;
+            margin: 0 auto;
+
+            ul{
+                li{
+                    padding-bottom: 12px;
+                    font-size: $boton;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .contactanosfooter{
+            padding: 25px 0;
+            margin: 0 auto;
+            text-align: right;
+
+            .titulocontactofooter{
+                letter-spacing: 5px;
+                font-size: $parrafo;
+                text-transform: uppercase;
+            }
+            .correo{
+                letter-spacing: 2px;
+
+                margin-top: 10px;
+                font-weight: 600;
+                font-size: 14px;
+                padding-bottom: 15px;
+            }
+            a{
+                position: relative;
+                background: $azul;
+                border-radius: 20px;
+                font-size: $boton;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 7px 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        .padrefooter{
+            text-align: center;
+            .sabermas{
+                .descrip-sabermas{
+                    width: 100%;
+                }
+            }
+            .contactanosfooter{
+                text-align: center; 
+            } 
+        }
+    }
+}

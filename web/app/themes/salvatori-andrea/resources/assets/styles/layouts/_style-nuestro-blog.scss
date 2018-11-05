@@ -1,0 +1,104 @@
+.contenedorpadre-nuestro-blog{
+    z-index: 9;
+    position: relative;
+    color: white;
+    padding: 0 0 0 8vw;
+    .contenedor-titulo-nuestro-blog{
+        h3{
+            color: white;
+            font-size: 25px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 8px;
+                width: 100px;
+                height: 4px;
+                background: white;
+                transition: 0.5s;
+            }
+        }
+        p{
+            color: white;
+            letter-spacing: 1px;
+            font-size: 15px;
+            width: 50%;
+            padding-bottom: 15px;
+        }
+        span{
+            padding-bottom: 20px;
+            color: white;
+            letter-spacing: 1px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+    .contenedor-abuelo-nuestro-blog{
+        position: relative;
+        padding-bottom: 50px;        
+        width: 90%;
+        .contenedor-padre-blogs{
+            background: $morado;
+            padding: 3% !important;
+            margin-top: 40px;
+            border-radius: 15px;
+        }
+        .contenedor-papa-blogs{
+            &:nth-of-type(2) {
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+            .contenedor-blogs{
+                padding: 0 20px;
+
+                h4{
+                    font-size: 15px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding-bottom: 15px;
+                }
+                p{
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    padding-bottom: 20px;
+                    height: 100px;
+                }
+                a{
+                    position: relative;
+                    background: white;
+                    border-radius: 20px;
+                    font-size: 10px;
+                    color: black;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    padding: 7px 20px;
+                }
+
+            }
+        }
+    }
+    .contenedor-boton-nuestro-blog{
+        position: relative;
+        width: 91%;
+        padding-bottom: 50px;
+        text-align: right;
+
+        a{
+            background: white;
+            border-radius: 20px;
+            font-size: 10px;
+            color: $pupura;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 7px 20px;
+            position: relative;
+        }
+    }
+}

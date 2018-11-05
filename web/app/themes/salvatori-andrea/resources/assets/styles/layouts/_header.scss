@@ -1,0 +1,83 @@
+
+nav{
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  .boton-menu,
+  .clickUno{
+    display: block !important;
+    position: absolute;
+    margin-left: 0 !important;
+    top: 50px;
+    left: 40px;
+    color: #fff;
+    transform: scale(1.8);
+    left: 22px;
+    z-index: 999999;
+
+    &:hover{
+      transform: scale(1.9);
+    }
+  }
+
+  .contenedor-logo{
+    width: 270px;
+    min-width: 200px;
+    height: auto;
+    padding: 4vw 0 0 8vw;
+    z-index: 99999;
+    position: relative;
+    
+  }
+  .menu-animado{
+    top: 0;
+    position: fixed;
+    width: 0;
+    height: 0;
+    background: $morado;
+    color: white;
+    z-index: 9999;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+  }
+
+  .menuexpandido{
+    width: 120%;
+    height: 120%;
+  }
+
+  .border {
+    border-bottom-right-radius: 0;
+  }
+}
+
+.degradado{
+  width: 200%;
+  position: fixed;
+  height: 200%;
+  background: linear-gradient(230deg, #75d3f3, #2196bd, #904ce4, #101636, #090d21);
+  background-size: 1000% 1000%;
+  animation: deg 19s ease infinite;
+}
+
+@keyframes deg { 
+  0%{background-position:94% 0%}
+  50%{background-position:7% 100%}
+  100%{background-position:94% 0%}
+}
+
+.imagensvg{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.parallax{
+  position: absolute;
+  transition: 1.5s;
+  top: 0;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,156 @@
+.contenedor-padre-nuestros-servicios{
+    z-index: 1;
+    position: relative;
+    padding: 0 0 0 8vw;
+    .contenedor-titulo-nuestros-servicios{
+        h3{
+            color: white;
+            font-size: 25px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 8px;
+                width: 100px;
+                height: 4px;
+                background: white;
+                transition: 0.5s;
+            }
+        }
+        p{
+            color: white;
+            letter-spacing: 1px;
+            font-size: 15px;
+            width: 50%;
+            padding-bottom: 30px;
+        }
+    }
+    .contenedor-padre-tarjetas-nuestros-servicios{
+        position: relative;
+        margin-left: -27px;
+        padding: 0px 80px 20px 0;
+
+        .contenedor-tarjeta-nuestros-servicios{
+            padding: 20px;
+            border-radius: 20px;
+            position: relative;
+            transition: 0.5s;
+            margin: 5px;
+            &:hover{
+                transition: 0.5s;
+                transform: scale(1.03);
+                &::after{
+                    height: 100%;
+                    transition: 0.5s
+                }
+                .contenedor-descrip-tarjeta-nuestros-servicios{
+                    color: $azul;
+                    font-size: 15px;
+                    transition: 0.5s;
+                }
+
+                p{
+                    &::after{
+                        transition: 0.5s;
+                        background: $azul !important;
+                    }
+                }
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0%;
+                width: 100%;
+                background: $morado;
+                height: 0%;
+                left: 0;
+                border-radius: 20px;
+                transition: 0.5s;
+                z-index: -1;  
+            }
+
+            .contenedor-imagen-tarjeta-nuestros-servicios{
+                width: 40px;
+                height: 40px;
+                position: relative;
+                z-index: 99;
+            }
+            .contenedor-titulos-tarjeta-nuestros-servicios{
+                h4{
+                    font-size: 14px;
+                    color: white;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 15px 0;
+                    z-index: 99;
+                }
+                p{
+                    color: white;
+                    letter-spacing: 1px;
+                    font-size: 12px;
+                    padding-bottom: 15px;
+                    height: 80px;
+                    z-index: 99;
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 8px;
+                        width: 60px;
+                        height: 4px;
+                        background: white;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            .contenedor-descrip-tarjeta-nuestros-servicios{
+                color: white;
+                font-size: 15px;
+                transition: 0.5s;
+                ul{
+                    padding-bottom: 15px;
+                    z-index: 99;
+                    font-size: 12px;
+                }
+            }
+            a{
+                position: relative;
+                background: #35b4df;
+                border-radius: 20px;
+                font-size: 10px;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 7px 20px;
+            }
+        }
+    }
+    .contenedor-boton-video{
+        position: relative;
+        width: 94%;
+        padding-bottom: 44px;
+        text-align: right;
+
+        .vermasservicios{
+            background: white;
+            border-radius: 20px;
+            font-size: 10px;
+            color: $pupura;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 7px 20px;
+            position: relative;
+        }
+    }
+
+}

@@ -1,0 +1,60 @@
+.contenedormedusa{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .textopublicitario{
+        position: relative;
+        width: 50%;
+        min-height: 150px;
+
+        .contenedortituloh3{
+            padding: 0 0 0 8vw; 
+
+            h3{
+                padding-bottom: 20px;
+                color: white;
+                letter-spacing: 2px;
+                font-size: 40px;
+                line-height: 1;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            h4{
+                color: white;
+                padding-bottom: 20px;
+                width: 277px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .botonpurpura{
+                position: relative;
+                background: #753bbd;
+                border-radius: 20px;
+                font-size: 10px;
+                color: white;
+                text-transform: uppercase;
+                padding: 7px 15px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .imagendemedusa{
+        width:50%;
+        position: relative;
+        height: 100vh;
+
+        img{
+            height: 105%;
+            max-width: unset;
+            position: absolute;
+            width: auto;
+            top: -70px;
+            right: -70px;
+        }
+    }
+}
