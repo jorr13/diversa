@@ -4,9 +4,11 @@ import {WOW} from 'wowjs';
 import Barba from 'barba.js';
 import $ from 'jquery';
 import jQuery from 'jquery';
+import bulmaCarousel from 'bulma-carousel';
 window.$ = $;
 window.jQuery = jQuery;
 window.Barba = Barba;
+window.bulmaCarousel= bulmaCarousel;
 
   //Set up Element animations on Scroll
     window.wow = new WOW(

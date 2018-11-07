@@ -12,11 +12,19 @@
     </div>
     
     <div class="menu-animado">
-        @if (has_nav_menu('primary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
-        @endif
+        <div class="contenedor-menu">
+                @if (has_nav_menu('primary_navigation'))
+                {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
+            @endif
+            <div class="contenedor-svg-menu" id="content-svg-menu">
+
+            </div>
+        </div>
+
     </div>
 
 </nav>
 
 <div class="degradado" ></div>
+
+

@@ -2,7 +2,6 @@
 //Vue.prototype.$appUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '')
 Vue.prototype.$appUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '')
 
-
 //setting up the axios method to Get Posts and Pages in a Mixin.
 
 import pagination from './components/pagination.vue'

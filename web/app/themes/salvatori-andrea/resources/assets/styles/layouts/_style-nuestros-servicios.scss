@@ -19,7 +19,7 @@
                 bottom: 8px;
                 width: 100px;
                 height: 4px;
-                background: white;
+                background: $azul;
                 transition: 0.5s;
             }
         }
@@ -120,6 +120,7 @@
                     padding-bottom: 15px;
                     z-index: 99;
                     font-size: 12px;
+                    height: 100px;
                 }
             }
             a{

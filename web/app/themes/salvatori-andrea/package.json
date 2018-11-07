@@ -24,7 +24,10 @@
     "barba.js": "^1.0.0",
     "buefy": "^0.6.7",
     "bulma": "^0.5.0",
+    "bulma-carousel": "^3.0.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "vue-carousel": "^0.16.0-rc1",
     "waypoints": "^4.0.1",
     "wowjs": "^1.1.3"
   }

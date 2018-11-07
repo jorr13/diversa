@@ -6,7 +6,7 @@ require('./utils');
 // Require Vue
 window.axios = require('axios');
 window.Vue = require('vue');
-
+require('bulma-carousel/dist/js/bulma-carousel.min.js')
 require('./globals')
 
 Vue.component('posts-loop', require('./components/posts-loop.vue'));
@@ -30,6 +30,12 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
             setTimeout(() => {
                 $('.boton-menu').toggleClass('is-active');
             }, 300)
+
+            setTimeout(() => {
+                $('.sage-menu > .menu-item').toggleClass('menu-item-opacity');
+                $('.contenedor-svg-menu').toggleClass('menu-item-opacity');
+            }, 550)
+
             if(conteo == 0){
             $('.menu-animado').addClass('menuexpandido');
             setTimeout(() => {
@@ -45,6 +51,17 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
         }
         });
 
+       var valorMenu = $(".menu-item > a"),
+       i, x;
+       for (i = 0; i < valorMenu.length; i++) {
+        x = valorMenu[i].textContent;
+        valorMenu[i].setAttribute( "data-text", x);
+       }
+
+
+       
+ 
+
         window.addEventListener('scroll', function() {
 
             var scrolledHeight = window.pageYOffset,
@@ -57,4 +74,14 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
             }
         });
 
+        ////carousel
+
+        var carousels = bulmaCarousel.attach();
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('content-svg-menu'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'http://localhost:3000/json/menu.json'
+            });
     });
