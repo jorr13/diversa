@@ -3,6 +3,7 @@
     position: relative;
     color: white;
     padding: 0 0 0 8vw;
+    margin-top: 10%;
     .contenedor-titulo-nuestro-blog{
         h3{
             color: white;
@@ -99,6 +100,31 @@
             letter-spacing: 2px;
             padding: 7px 20px;
             position: relative;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .contenedor-abuelo-nuestro-blog{
+            .contenedor-papa-blogs{
+                &:nth-of-type(2) {
+                    border-left: 0px solid black;
+                    border-right: 0px solid black;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .contenedor-abuelo-nuestro-blog{
+            .contenedor-papa-blogs{
+                &:nth-of-type(2) {
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        .contenedor-titulo-nuestro-blog{
+            p{
+                width: 90%;
+            }
         }
     }
 }

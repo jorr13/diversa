@@ -11,7 +11,7 @@
         position: relative;
         width: 50%;
         min-height: 150px;
-
+        z-index: 8;
         .contenedortituloh3{
             padding: 0 0 0 8vw; 
 
@@ -55,6 +55,21 @@
             width: auto;
             top: -70px;
             right: -70px;
+        }
+    }
+    
+    @media only screen and (max-width: 550px) {
+        .textopublicitario{
+            .contenedortituloh3{
+                h3{
+                    font-size: 34px;
+                }
+            } 
+        } 
+        .imagendemedusa{
+            img{
+                height: 90%;
+            }
         }
     }
 }

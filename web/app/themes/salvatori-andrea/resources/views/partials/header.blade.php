@@ -16,9 +16,21 @@
                 @if (has_nav_menu('primary_navigation'))
                 {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
             @endif
-            <div class="contenedor-svg-menu" id="content-svg-menu">
+
+
+            <div class="contenedor-papa-imagen-svg">
+                <div class="contenedor-svg-menu" id="content-svg-menu">
+
+                </div>
+
+                <div class="contenedor-img-menu">
+                    @foreach($page_loop as $page)
+                        <img class="imagen-menu-svg" data-text="{!! $page['title'] !!}" src="{!! $page['thumbnail'] !!}" alt="">
+                    @endforeach  
+                </div>
 
             </div>
+
         </div>
 
     </div>

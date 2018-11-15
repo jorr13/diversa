@@ -11,6 +11,7 @@ require('./globals')
 
 Vue.component('posts-loop', require('./components/posts-loop.vue'));
 Vue.component('pages-loop', require('./components/pages-loop.vue'));
+Vue.component('proyectos-loop', require('./components/proyectos-loop.vue'));
 
 
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container) {
@@ -34,6 +35,9 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
             setTimeout(() => {
                 $('.sage-menu > .menu-item').toggleClass('menu-item-opacity');
                 $('.contenedor-svg-menu').toggleClass('menu-item-opacity');
+                setTimeout(() => {
+                    $('.contenedor-img-menu').toggleClass('menu-item-opacity');
+                }, 300)
             }, 550)
 
             if(conteo == 0){
@@ -51,16 +55,45 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
         }
         });
 
-       var valorMenu = $(".menu-item > a"),
-       i, x;
+
+
+
+        $('.menu-item a').addClass('a-menu');
+       var valorMenu = $('.a-menu'),
+       i, x,
+       dTM, dTI;
        for (i = 0; i < valorMenu.length; i++) {
         x = valorMenu[i].textContent;
-        valorMenu[i].setAttribute( "data-text", x);
+        valorMenu[i].setAttribute('data-text', x);
+        valorMenu[i].addEventListener('mouseenter', showImg);
+        valorMenu[i].addEventListener('mouseleave', hideImg);
+       }
+       $('.imagen-menu-svg').fadeOut();
+       function showImg(){
+        dTM = this.getAttribute('data-text');
+        $('.imagen-menu-svg').fadeOut();
+        $('img[data-text="'+ dTM +'"]').fadeIn();
+       }
+       function hideImg(){
+        $('.imagen-menu-svg').fadeOut();
        }
 
 
-       
- 
+
+       var x = $('.contenedor-imagen-peque'), i;
+       if(x){
+               x[0].addEventListener('click', hideDes);
+               x[0].click();
+       }
+
+       $('.contenedor-imagen-peque').click(hideDes);
+
+       function hideDes(){
+           $('.contenedor-tarjeta-grande').hide();
+           i = $(this).attr('id');
+           $('.' + i).fadeIn();
+       }
+
 
         window.addEventListener('scroll', function() {
 
@@ -84,4 +117,14 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
             autoplay: true,
             path: 'http://localhost:3000/json/menu.json'
             });
+
+            setTimeout(() => {
+            var heightSvg = document.getElementById('content-svg-menu').offsetHeight,
+            myinheri = document.querySelector('.contenedor-papa-imagen-svg');
+            myinheri.style.cssText = 'height:' + heightSvg + 'px';
+            document.getElementById('content-svg-menu').style.cssText = 'height:' + heightSvg + 'px';
+            setTimeout(() => {
+                document.querySelector('#content-svg-menu svg').style.cssText ="width: auto; height: 100%;";
+            }, 500)
+            }, 2000)
     });

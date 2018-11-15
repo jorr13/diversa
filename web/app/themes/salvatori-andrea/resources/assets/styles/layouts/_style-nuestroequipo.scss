@@ -1,8 +1,8 @@
-.contenedor-padre-nuestros-servicios{
+.contenedor-padre-nuestro-equipo{
     z-index: 1;
     position: relative;
     padding: 0 0 0 8vw;
-    .contenedor-titulo-nuestros-servicios{
+    .contenedor-titulo-nuestro-equipo{
         h3{
             color: white;
             font-size: 25px;
@@ -11,17 +11,6 @@
             text-transform: uppercase;
             padding-bottom: 20px;
             position: relative;
-
-            &::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 8px;
-                width: 100px;
-                height: 4px;
-                background: $azul;
-                transition: 0.5s;
-            }
         }
         p{
             color: white;
@@ -31,58 +20,31 @@
             padding-bottom: 30px;
         }
     }
-    .contenedor-padre-tarjetas-nuestros-servicios{
+    .contenedor-padre-tarjetas-nuestro-equipo{
         position: relative;
         margin-left: -27px;
         padding: 0px 80px 20px 0;
 
-        .contenedor-tarjeta-nuestros-servicios{
+        .contenedor-tarjeta-nuestro-equipo{
             padding: 20px;
             border-radius: 20px;
             position: relative;
             transition: 0.5s;
             margin: 5px;
+            background: linear-gradient(45deg, rgba(19,25,61,1) 0%, rgba(118,59,189,1) 46%, rgba(53,181,223,1) 85%, rgba(53,181,223,1) 100%);
+
             &:hover{
                 transition: 0.5s;
                 transform: scale(1.03);
-                &::after{
-                    height: 100%;
-                    transition: 0.5s
-                }
-                .contenedor-descrip-tarjeta-nuestros-servicios{
-                    color: $azul;
-                    font-size: 15px;
-                    transition: 0.5s;
-                }
-
-                p{
-                    &::after{
-                        transition: 0.5s;
-                        background: $azul !important;
-                    }
-                }
             }
 
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0%;
-                width: 100%;
-                background: $morado;
-                height: 0%;
-                left: 0;
-                border-radius: 20px;
-                transition: 0.5s;
-                z-index: -1;  
-            }
-
-            .contenedor-imagen-tarjeta-nuestros-servicios{
+            .contenedor-imagen-tarjeta-nuestro-equipo{
                 width: 40px;
                 height: 40px;
                 position: relative;
                 z-index: 99;
             }
-            .contenedor-titulos-tarjeta-nuestros-servicios{
+            .contenedor-titulos-tarjeta-nuestro-equipo{
                 h4{
                     font-size: 14px;
                     color: white;
@@ -99,29 +61,12 @@
                     height: 80px;
                     z-index: 99;
                     position: relative;
-
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 8px;
-                        width: 60px;
-                        height: 4px;
-                        background: white;
-                        transition: 0.5s;
-                    }
                 }
             }
-            .contenedor-descrip-tarjeta-nuestros-servicios{
+            .contenedor-descrip-tarjeta-nuestro-equipo{
                 color: white;
                 font-size: 15px;
                 transition: 0.5s;
-                ul{
-                    padding-bottom: 15px;
-                    z-index: 99;
-                    font-size: 12px;
-                    height: 100px;
-                }
             }
             a{
                 position: relative;
@@ -153,12 +98,15 @@
             position: relative;
         }
     }
-    @media only screen and (max-width: 550px) {
-        .contenedor-titulo-nuestros-servicios{
+    @media only screen and (max-width: 768px) {
+        .contenedor-titulo-nuestro-equipo{
             p{
+                color: white;
+                letter-spacing: 1px;
+                font-size: 15px;
                 width: 90%;
+                padding-bottom: 30px;
             }
-        } 
+        }
     }
-
 }

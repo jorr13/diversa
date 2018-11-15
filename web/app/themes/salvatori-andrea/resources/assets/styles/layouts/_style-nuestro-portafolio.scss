@@ -31,4 +31,155 @@
             padding-bottom: 30px;
         }
     }
+
+    .contenedor-tarjetas-proyectos{
+        position: relative;
+        .contenedor-proyecto-seleccionado{
+            position: relative;
+            .contenedor-tarjeta-grande{
+                position: absolute;
+                .contenedor-imagen-destacada{
+                    position: relative;
+                    min-height: 200px;
+                    max-height: max-content;
+                    height: 300px;
+                    width: 75%;
+                    overflow: hidden;
+                    border-radius: 50px;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                .contenedor-info-proyecto{
+                    position: absolute;
+                    top: 35px;
+                    width: 268px;
+                    color: white;
+                    right: 38px;
+                    border-radius: 30px;
+                    padding: 30px;
+                    background: $pupura;
+                    h3{
+                        padding-bottom: 6px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 700;
+          
+                    } 
+                    span{
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        padding-bottom: 15px;
+                        strong{
+                            color: white;
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                        padding: 6px 0;
+                        letter-spacing: 1px;
+                    }
+                    a{
+                        padding: 5px 12px ;
+                        font-size:10px;
+                        border-radius: 20px;
+                        color: $morado;
+                        background: white;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .contenedor-cuatro-imagen{
+            position: relative;
+            .contenedor-hijo-cuatro-imagen{
+                position: relative;
+
+                .contenedor-imagen-peque{
+                    position: relative;
+                    height: 105px;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    min-width: 100px;
+                    max-width: 160px;
+                    &:hover{
+                        transition: 0.5s;
+                        transform: scale(1.03);
+                        cursor: pointer;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .contenedor-tarjetas-proyectos{
+            position: relative;
+            .contenedor-proyecto-seleccionado{
+                height: 420px; 
+            }
+            .contenedor-cuatro-imagen{
+                position: relative;
+                .contenedor-hijo-cuatro-imagen{
+                    position: relative;
+                    padding: 0 8vw 0 0;
+                    display: flex;
+    
+                    .contenedor-imagen{
+                        display: inline-block;
+                        width: 50%;
+                        padding: 0 8vw 0 0;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 550px) {
+        .contenedor-titulo-portafolio-home{
+            p{
+                width: 90%;
+            }
+        }
+    }
+    @media only screen and (max-width: 420px) {
+        .contenedor-tarjetas-proyectos{
+            position: relative;
+            .contenedor-proyecto-seleccionado{
+                height: 460px;
+                .contenedor-tarjeta-grande{
+                    .contenedor-imagen-destacada{
+                        width: 90%;
+                    }
+                    .contenedor-info-proyecto{
+                        top: unset;
+                        bottom: -42%;
+                        right: 70px;
+                    }
+                }
+            } 
+        }
+    }
+    @media only screen and (max-width: 410px) {
+        .contenedor-tarjetas-proyectos{
+            position: relative;
+            .contenedor-cuatro-imagen{
+                position: relative;
+                .contenedor-hijo-cuatro-imagen{
+                    position: relative;
+                    padding: 0 0 0 0;
+    
+                    .contenedor-imagen{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

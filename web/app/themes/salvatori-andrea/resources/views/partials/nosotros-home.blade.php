@@ -6,22 +6,105 @@
 
 
 
-    <div class='carousel carousel-animated carousel-animate-slide' data-size="5">
+    <div class='carousel carousel-animated carousel-animate-slide' data-size="4">
         <div class='carousel-container'>
 
-            @if(have_rows('carousel-de-personal', 22))
-                @while (have_rows('carousel-de-personal', 22))@php(the_row())
-                    <div class='carousel-item is-active'>
-                        <div class="contenedor-tarjeta-carousel" style="background: url('{{ get_sub_field('foto_del_trabajador') }}'); background-size: cover; background-repeat: no-repeat; height: 280px; position:relative; border-radius: 25px; background-position: center;">
-                            <div class="contenedor-informacion">
-                                    <h3>{{ get_sub_field('nombre_del_trabajador') }} </h3>
-                                    <h4>{{ get_sub_field('cargo_del_trabajador') }}</h4>
-                            </div>
-                        </div>
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
                     </div>
-                @endwhile 
-            @else      
-            @endif
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
+                    </div>
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
+                    </div>
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
+                    </div>
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
+                    </div>
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
+                    </div>
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class='carousel-item is-active'>
+                <div class="contenedor-tarjeta-nuestro-equipo">
+                    <div class="contenedor-imagen-tarjeta-nuestro-equipo">
+                        <img src="{{ home_url('app/uploads/2018/10/digital.png') }}" alt="">
+                    </div>
+            
+                    <div class="contenedor-titulos-tarjeta-nuestro-equipo">
+                        <h4>Diseñadores</h4>
+                        <p>Comprometidos con el hacer el mejor el diseño del mundo, en todos los espacios posibles</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 

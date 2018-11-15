@@ -59,3 +59,32 @@ include_once( get_stylesheet_directory() . '/mu-plugins/acf/acf.php' );
 
 // Adding ACF to the rest API
 include_once( get_stylesheet_directory() . '/mu-plugins/acf-rest/index.php' );
+
+
+
+//agregar un post type
+function create_posttype() {
+    register_post_type( 'proyectos',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Proyectos' ),
+                'singular_name' => __( 'Proyectos' )
+            ),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+            'public' => true,
+            'publicly_queryable' => true,
+            'has_archive' => false,
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            'rewrite' => array('slug' => 'proyectos'),
+            'taxonomies' => array( 'category' ),
+            //esto es para poder consumirlo desde la API de wordpress
+            'show_in_rest' => true,
+            'rest_base'          => 'proyectos-api',
+            'rest_controller_class' => 'WP_REST_Posts_Controller',
+
+            //
+        )
+    );
+}
+add_action( 'init', 'create_posttype' );

@@ -1,7 +1,7 @@
 <div class="contenedorpadre-nuestro-blog">
     <div class="contenedor-titulo-nuestro-blog">
         <h3>¿Conoces nuestro blog?</h3>
-        <p>las tendencias en diseño y tecnología avanzan de manera constante y con fuerza</p>
+        <p>Las tendencias en diseño y tecnología avanzan de manera constante y con fuerza</p>
         <span>¿Quieres estar al día con nosotros?</span>
     </div>
     <div class="contenedor-abuelo-nuestro-blog">
