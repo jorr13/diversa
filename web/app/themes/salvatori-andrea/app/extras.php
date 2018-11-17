@@ -86,5 +86,47 @@ function create_posttype() {
             //
         )
     );
+
+    register_post_type( 'servicios',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Servicios' ),
+                'singular_name' => __( 'Servicios' )
+            ),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+            'public' => true,
+            'publicly_queryable' => true,
+            'has_archive' => false,
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            'rewrite' => array('slug' => 'servicios'),
+            'taxonomies' => array( 'category' ),
+            //esto es para poder consumirlo desde la API de wordpress
+            'show_in_rest' => true,
+            'rest_base'          => 'servicios-api',
+            'rest_controller_class' => 'WP_REST_Posts_Controller',
+
+            //
+        )
+    );
+
 }
+
+if( function_exists('acf_add_options_page') ) {
+        
+    acf_add_options_page(array(
+        'page_title' 	=> 'Home',
+        'menu_title'	=> 'Home',
+        'menu_slug' 	=> 'home',
+        'capability'	=> 'edit_posts',
+        'redirect'		=> false,
+        'menu_icon' => 'dashicons-welcome-write-blog',
+    ));
+    
+}
+
+
+
+
+
 add_action( 'init', 'create_posttype' );

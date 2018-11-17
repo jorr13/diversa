@@ -10,12 +10,14 @@
             <img src="{{ home_url('app/uploads/2018/10/Diversa-Logo.png') }}" alt="">
         </a>
     </div>
+
+    <div class="svg-contenedor-menu" style="background: url({{ home_url('app/uploads/2018/10/pieza-logo-01.svg') }}); background-repeat:no-repeat; background-size: cover; z-index: 999; position: fixed; height: 143px; width: 316px; min-width: 250px; top: 0;"></div>
     
     <div class="menu-animado">
         <div class="contenedor-menu">
-                @if (has_nav_menu('primary_navigation'))
-                {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
-            @endif
+            @if (has_nav_menu('primary_navigation'))
+            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
+        @endif
 
 
             <div class="contenedor-papa-imagen-svg">
@@ -35,6 +37,9 @@
 
     </div>
 
+    <a href="#" class="botonsubir">
+        <i class="favi fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
 </nav>
 
 <div class="degradado" ></div>

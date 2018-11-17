@@ -111,6 +111,29 @@ class App extends Controller
         }, $proyecto);
     }
 
+////////////////
+    function categoryLoop()
+    {
+        $category = get_terms([
+            'taxonomy' => 'category',
+            'numberposts' => -1,
+        ]);
+
+        return array_map(function ($term) {
+            return [
+                'title' => $term->name,
+                'img' => get_field('icono_de_la_categoria', $term),
+                'desc' => $term->description,
+                'link' => get_term_link($term),
+                'id' => $term->term_id,
+                'slug' => $term->slug
+            ];
+        }, $category);
+    }
+
+
+
+
 
 
 }

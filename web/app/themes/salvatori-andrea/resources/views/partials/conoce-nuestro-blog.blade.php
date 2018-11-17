@@ -1,8 +1,15 @@
 <div class="contenedorpadre-nuestro-blog">
     <div class="contenedor-titulo-nuestro-blog">
-        <h3>¿Conoces nuestro blog?</h3>
-        <p>Las tendencias en diseño y tecnología avanzan de manera constante y con fuerza</p>
-        <span>¿Quieres estar al día con nosotros?</span>
+            @if(have_rows('nuestro-blog', 'options'))
+            {{-- loop through the rows of data --}}
+            @while (have_rows('nuestro-blog', 'options'))@php the_row() @endphp
+                <h3>{{ get_sub_field('titulo_de_proyecto') }}</h3>
+                <p>{{ get_sub_field('descripcion_proyecto') }}</p>
+                <span>{{ get_sub_field('mensaje_blog') }}</span>
+            @endwhile 
+            @else      
+            @endif
+
     </div>
     <div class="contenedor-abuelo-nuestro-blog">
         <div class="contenedor-padre-blogs columns is-paddingless is-multiline">

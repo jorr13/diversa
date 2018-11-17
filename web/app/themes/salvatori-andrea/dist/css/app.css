@@ -17566,6 +17566,10 @@ nav {
   z-index: 99;
 }
 
+nav .botonsubir {
+  display: none;
+}
+
 nav .boton-menu,
 nav .clickUno {
   display: block !important;
@@ -17753,6 +17757,35 @@ nav .border {
 }
 
 @media only screen and (max-width: 768px) {
+  nav .botonsubir {
+    display: block;
+    top: auto !important;
+    bottom: 64px !important;
+    position: fixed !important;
+    right: 19px !important;
+    background: #35b4df !important;
+    border-radius: 50% !important;
+    width: 55px !important;
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    padding: 0 14px;
+    height: 55px;
+  }
+
+  nav .botonsubir .favi::before {
+    content: "\F062";
+    position: relative;
+    left: 5px;
+    top: 15px;
+    height: 18px;
+    font-size: 21px;
+    color: white;
+  }
+
+  nav .svg-contenedor-menu {
+    position: absolute !important;
+  }
+
   nav .menu-animado .contenedor-menu .menu-menu-1-container {
     width: 70%;
     left: 50%;
@@ -17792,6 +17825,16 @@ nav .border {
 
   nav .menu-animado .contenedor-menu .menu-menu-1-container ul li a {
     font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    position: absolute !important;
+  }
+
+  nav .svg-contenedor-menu {
+    position: absolute !important;
   }
 }
 
@@ -18273,7 +18316,7 @@ body#tinymce {
   position: relative;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 768px) {
   .contenedor-padre-nuestros-servicios .contenedor-titulo-nuestros-servicios p {
     width: 90%;
   }
@@ -18551,7 +18594,7 @@ body#tinymce {
   position: relative;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 768px) {
   .contenedor-padre-nosotros-home .contenedor-titulo-nosotros-home p {
     width: 90%;
   }
@@ -18727,7 +18770,7 @@ body#tinymce {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 768px) {
   .contenedor-padre-portafolio-home .contenedor-titulo-portafolio-home p {
     width: 90%;
   }

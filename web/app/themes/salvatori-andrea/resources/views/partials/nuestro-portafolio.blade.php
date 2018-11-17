@@ -1,7 +1,13 @@
 <div class="contenedor-padre-portafolio-home">
     <div class="contenedor-titulo-portafolio-home">
-        <h3>Proyectos exitosos</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quasi eum distinctio ex</p>
+            @if(have_rows('proyectos_exitoso', 'options'))
+            {{-- loop through the rows of data --}}
+            @while (have_rows('proyectos_exitoso', 'options'))@php the_row() @endphp
+                <h3>{{ get_sub_field('titulo_de_proyecto') }}</h3>
+                <p>{{ get_sub_field('descripcion_proyecto') }}</p>
+            @endwhile 
+            @else      
+            @endif
     </div>
 
     <div class="contenedor-tarjetas-proyectos columns is-multiline">

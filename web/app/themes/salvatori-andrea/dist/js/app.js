@@ -11084,6 +11084,10 @@ Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, c
             el.style.top = '-' + topImg / 100 * 70 + 'px';
         }
     });
+    $(".botonsubir").click(function () {
+
+        $('html, body').animate({ scrollTop: $(".boton-menu").offset().top - 100 }, 1500);
+    });
 
     ////carousel
 

@@ -2,8 +2,15 @@
   <div class="padrefooter columns is-multiline ">
     <div class="sabermas column is-3">
       <div class="descrip-sabermas">
-        <span>Estamos dispuestos a acompañarte en la construcción de tu proyecto.</span>
+          @if(have_rows('footer', 'options'))
+          {{-- loop through the rows of data --}}
+          @while (have_rows('footer', 'options'))@php the_row() @endphp
+            <span>{{ get_sub_field('mensaje_footer') }}</span>
+          @endwhile 
+          @else      
+          @endif
       </div>
+
       <a href="#">Saber más</a>
     </div>
 
@@ -24,9 +31,15 @@
     </div>
 
     <div class="contactanosfooter column is-2">
-      <span class="titulocontactofooter">Contactanos en:</span>
-      <p class="correo">info@diversadc.com</p>
-      <a href="#">contactanos</a>
+        @if(have_rows('footer', 'options'))
+        {{-- loop through the rows of data --}}
+        @while (have_rows('footer', 'options'))@php the_row() @endphp
+        <span class="titulocontactofooter">{{ get_sub_field('contactanos') }}</span>
+        <p class="correo">{{ get_sub_field('correo_a_mostrar') }}</p>
+        @endwhile 
+        @else      
+        @endif
+
     </div>
   </div>
 </footer>

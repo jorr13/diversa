@@ -1,14 +1,20 @@
 <div class="contenedormedusa">
 <div class="textopublicitario">
-    <div class="contenedortituloh3">
-        <h3>the relationships are our essence.</h3>
-        <h4>your ideas our raw material.</h4>
-        <a href="#" class="botonpurpura">contáctanos</a>
-    </div>
+@if(have_rows('mensaje_publicitario', 'options'))
+@while (have_rows('mensaje_publicitario', 'options'))@php(the_row())
+
+<div class="contenedortituloh3">
+    <h3>{{ get_sub_field('mensaje') }}</h3>
+    <h4>{{ get_sub_field('descripcion_del_mensaje') }}</h4>
+    <a href="#" class="botonpurpura">contáctanos</a>
+</div>
     
 </div>
 <div class="imagendemedusa parallax">
-    <img src="{{ home_url('app/uploads/2018/10/medusa.png') }}" alt="">
+    <img src="{{ get_sub_field('imagen_del_mensaje') }}" alt="">
 </div>
+@endwhile 
+@else      
+@endif
 </div>
 

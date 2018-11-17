@@ -3,7 +3,9 @@ nav{
   position: fixed;
   width: 100%;
   z-index: 99;
-
+.botonsubir{
+  display: none;
+}
   .boton-menu,
   .clickUno{
     display: block !important;
@@ -185,6 +187,34 @@ nav{
     }
   }
   @media only screen and (max-width: 768px) {
+    .botonsubir{
+      display: block;
+      top: auto!important;
+      bottom: 64px!important;
+      position: fixed!important;
+      right: 19px!important;
+      background: $azul !important;
+      border-radius: 50%!important;
+      width: 55px!important;
+      box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+      padding: 0 14px;
+      height: 55px;
+      .favi{
+        &::before{
+          content: "\F062";
+          position: relative;
+          left: 5px;
+          top: 15px;
+          height: 18px;
+          font-size: 21px;
+          color:white;
+
+        }
+      }
+    }
+    .svg-contenedor-menu{
+      position: absolute !important;
+    }
     .menu-animado{
       .contenedor-menu{
         .menu-menu-1-container{
@@ -239,7 +269,14 @@ nav{
       } 
     }
   }
-
+}
+@media only screen and (max-width: 768px) {
+  nav{
+    position: absolute !important;
+    .svg-contenedor-menu{
+      position: absolute !important;
+    }
+  }
 }
 .menu-item-opacity{
   opacity: 1 !important;

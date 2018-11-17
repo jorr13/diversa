@@ -129,7 +129,8 @@
             position: relative;
         }
     }
-    @media only screen and (max-width: 550px) {
+    
+    @media only screen and (max-width: 768px) {
        .contenedor-titulo-nosotros-home{
             p{
                 width: 90%;
