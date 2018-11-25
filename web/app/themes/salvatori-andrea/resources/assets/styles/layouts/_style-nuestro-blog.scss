@@ -2,8 +2,8 @@
     z-index: 9;
     position: relative;
     color: white;
-    padding: 0 0 0 8vw;
-    margin-top: 10%;
+    padding: 0 0 0 10vw;
+    /* margin-top: 10%; */
     .contenedor-titulo-nuestro-blog{
         h3{
             color: white;
@@ -42,8 +42,8 @@
     }
     .contenedor-abuelo-nuestro-blog{
         position: relative;
-        padding-bottom: 50px;        
-        width: 90%;
+        padding-bottom: 50px;
+        width: 89%;
         .contenedor-padre-blogs{
             background: $morado;
             padding: 3% !important;
@@ -59,9 +59,8 @@
                 padding: 0 20px;
 
                 h4{
-                    font-size: 15px;
+                    font-size: 20px;
                     font-weight: 700;
-                    text-transform: uppercase;
                     padding-bottom: 15px;
                 }
                 p{
@@ -74,26 +73,26 @@
                     position: relative;
                     background: white;
                     border-radius: 20px;
-                    font-size: 10px;
+                    font-size: 8px;
                     color: black;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     padding: 7px 20px;
+                    box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
                 }
-
             }
         }
     }
     .contenedor-boton-nuestro-blog{
         position: relative;
-        width: 91%;
+        width: 90%;
         padding-bottom: 50px;
         text-align: right;
 
         a{
             background: white;
             border-radius: 20px;
-            font-size: 10px;
+            font-size: 8px;
             color: $pupura;
             font-weight: 700;
             text-transform: uppercase;

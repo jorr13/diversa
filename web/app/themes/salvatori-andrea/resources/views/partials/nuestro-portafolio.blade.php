@@ -15,8 +15,7 @@
         <div class="contenedor-proyecto-seleccionado column is-7" >
             @foreach(array_slice($proyectos_loop,0,4) as $proyecto)
             <div class="contenedor-tarjeta-grande item-{{$proyecto['id']}}">
-                <div class="contenedor-imagen-destacada">
-                    <img src="{{$proyecto['thumbnail']}}"  alt="">
+                <div class="contenedor-imagen-destacada" style="background:url({{$proyecto['thumbnail']}}); background-size:cover;">
                 </div>
                 <div class="contenedor-info-proyecto">
                     <h3>{{$proyecto['title']}}</h3>
@@ -32,12 +31,14 @@
             <div class="contenedor-hijo-cuatro-imagen columns is-multiline">
                 @foreach(array_slice($proyectos_loop,0,4) as $proyecto)
                     <div class="contenedor-imagen column  is-one-fifths-widescreen is-half-desktop ">
-                        <div class="contenedor-imagen-peque" id="item-{{$proyecto['id']}}" >
-                            <img src="{{$proyecto['thumbnail']}}" alt="">
+                        <div class="contenedor-imagen-peque" id="item-{{$proyecto['id']}}" style="background:url({{$proyecto['thumbnail']}}); background-size:cover; background-position: center; height: 166px;">
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
+    <div class="contenedor-boton-portafolio">
+        <a href="#" class="portafolio-home">Ir a nuestro portafolio</a>
+    </div> 
 </div>

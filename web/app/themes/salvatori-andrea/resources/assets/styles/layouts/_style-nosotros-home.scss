@@ -6,7 +6,7 @@
 
     .contenedor-titulo-nosotros-home{
         position: relative;
-        padding: 0 0 0 8vw;
+        padding: 0 0 0 10vw;
         h3{
             color: white;
             font-size: 25px;
@@ -37,15 +37,21 @@
     }
 
     .carousel{
-        width: 86%;
-        margin: 0 auto;
+        width: 82%;
+        /* margin: 0px auto; */
+        margin-left: 101px;
 
         .carousel-navigation{
             .carousel-nav-left{
                 border-radius: 20px;
+                left: 15px;
+                height: 2em;
+                width: 2em;
             }
             .carousel-nav-right{
                 border-radius: 20px;
+                height: 2em;
+                width: 2em;
             }
         }
         .carousel-container{
@@ -111,7 +117,7 @@
     }
     .contenedor-boton-conocenos{
         position: relative;
-        width: 94%;
+        width: 90%;
         padding-bottom: 44px;
         text-align: right;
         margin-top: 15px;
@@ -120,17 +126,23 @@
         .conocenos-home{
             background: white;
             border-radius: 20px;
-            font-size: 10px;
+            font-size: 8px;
             color: $pupura;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             padding: 7px 20px;
             position: relative;
+            box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
         }
     }
     
     @media only screen and (max-width: 768px) {
+        .carousel {
+            margin-left: 0px;
+            margin: 0px auto;
+            width: 95%;
+        }
        .contenedor-titulo-nosotros-home{
             p{
                 width: 90%;

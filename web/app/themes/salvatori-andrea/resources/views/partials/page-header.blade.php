@@ -5,8 +5,8 @@
         </div>
         @endif
     <div class="content-cover">
-        <p class="subtitle animated fadeInUp" data-wow-delay="0.2s">Hello, I'm Andrea. Welcome to Salvatori Agencies. </p>
-        <h1 class="title animated fadeInUp" data-wow-delay="0.4s">{!! App::title() !!}</h1>
-        <p class="excerpt  animated fadeInUp " data-wow-delay="0.6s">{!! App::excerpt() !!}</p>
+            @php($term = get_queried_object())
+        <h1 class="title animated fadeInUp" data-wow-delay="0.4s">{!! $term->name !!}</h1>
+        <p class="extracto animated fadeInUp" data-wow-delay="0.4s">{!! $term->description !!}</p>
     </div>
 </div>

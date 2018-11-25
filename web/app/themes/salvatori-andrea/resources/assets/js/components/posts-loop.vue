@@ -1,26 +1,16 @@
 <template>
     <div>
-        <h2 class="title">estos son los posts</h2>
         <!--posts start here-->
         <div class="posts-container columns is-mobile is-multiline">
-            <div v-for="(post, index) in posts" :key="index" class="column is-3-desktop is-6-mobile post-item  animate fadeIn">
-                <div class="card">
-                    <img :src='post.fimg_url' />
-                    <div class="card-content">
-                        <h2 class="title">{{post.title.rendered}}</h2>
+            <div v-for="(post, index) in posts" :key="index" class="column is-one-quarter-desktop is-half-tablet   animate fadeIn">
+                <div class="contenedor-papa-card post-item">
+                    <div class="card-posts">
+                        <div class="contenido-tarjeta">
+                            <h2 class="title-posts">{{post.title.rendered}}</h2>
+                            <p>{{post.excerpt.rendered}}</p>
+                            <a :href=" post.link ">leer más</a>
+                        </div>
                     </div>
-                    <footer class="card-footer">
-                        <p class="card-footer-item">
-                            <span>
-                               Read <a :href="post.link">More</a>
-                            </span>
-                        </p>
-                        <p class="card-footer-item">
-                            <span>
-                                Share on <a href="#">Facebook</a>
-                            </span>
-                        </p>
-                    </footer>
                 </div>
             </div>
         </div>

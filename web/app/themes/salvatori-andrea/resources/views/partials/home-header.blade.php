@@ -11,8 +11,8 @@
     
 </div>
 <div class="imagendemedusa parallax">
-    <img src="{{ get_sub_field('imagen_del_mensaje') }}" alt="">
-</div>
+        <img src="{{ get_sub_field('imagen_del_mensaje') }}" alt="">
+    </div>
 @endwhile 
 @else      
 @endif

@@ -1,11 +1,10 @@
 .main-cover{
-    height:100vh;
+    height:75vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
 
     .featured{
         position: absolute;
@@ -23,13 +22,22 @@
 
     .content-cover {
         z-index: 1;
+        width: 100%;
+        text-align: center;
         
         .title{
-            font-size: 50px;
+            font-size: 35px;
+            color: white;
+            text-transform: uppercase;
+
         }
     
-        .excerpt{
-            font-size: 25px;
+        .extracto{
+            width: 30%;
+            margin: 0 auto;
+            font-size: 15px;    
+            color: white;
+            text-align: center;
         }
     }
    

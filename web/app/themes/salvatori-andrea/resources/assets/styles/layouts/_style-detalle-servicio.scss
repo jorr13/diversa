@@ -1,0 +1,158 @@
+.contenedor-padre-detalle-del-servicio{
+    position:relative; 
+    z-index:2;
+    padding: 12vw; 
+    height: auto;
+    .contenedor-titulo-detalle-servicio{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 50px;
+
+        h1{
+            color: white;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+    .contenedor-abuelo-detalle-servicio{
+        height: auto;
+        position: relative;
+        .contenedor-papa-detalle-servicio{
+            position: relative;
+            height: auto;
+            .contenedor-opciones-detalle-servicio{
+               position: relative;
+               .contenedor-opcion-detalle-servicio{
+                   position: relative;
+                   text-align: center;
+                   border-bottom: 2px solid rgba(255,255,255,.5);
+                   color: rgba(255,255,255,.5);
+                   transition: 0.5s;
+                   span{
+                       color:rgba(255,255,255,.5);
+                       font-size: 15px;
+                       letter-spacing: 1px;
+                       font-weight: 500;
+                       transition: 0.5s;
+                    }
+                    &:hover{
+                        border-bottom: 2px solid white;
+                        cursor: pointer;
+                        transition: 0.5s;
+                        span{
+                            color:white;
+                            transition: 0.5s;
+                        }
+                    }
+                } 
+            }
+        }
+        .contenedor-content-left{
+            position: relative;
+            padding: 80px 40px;
+            color: white;
+            ul{
+                margin-left: 15px;
+                li{
+                    margin-top: 15px;
+                    font-size: 12px;
+                    position: relative;
+   
+                }
+            }
+            h3{
+                position: relative;
+                padding: 20px 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+            p{
+                position: relative;   
+                padding-bottom: 20px;
+                font-size: 12px;
+            }
+            
+            /*.alignleft{
+                float: left;
+                width: 30%;
+            }
+            .parrafo-alignrigth{
+                position: relative;
+                width: 50%;
+                float: right;
+                right: 30px;    
+                padding-bottom: 20px;
+                font-size: 12px;
+            }
+            .h3-alignrigth{
+                position: relative;
+                width: 50%;
+                float: right;
+                right: 30px;
+                padding-bottom: 20px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+            .h3-alignleft{
+                position: relative;
+                width: 50%;
+                float: left;
+                right: 30px;
+                padding: 53px 10px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 1px;
+            }*/
+
+        }
+    }
+    .contenedor-boton-servicios{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+        a{
+            position: relative;
+            background: $azul;
+            border-radius: 20px;
+            font-size: 8px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 7px 20px;
+            box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
+        }
+    }
+}
+.contenedor-clase-activa{
+    position: relative;
+    transition: 0.5s;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        border-radius: 40px;
+        bottom: -4px;
+        width: 6px;
+        height: 6px;
+        background: white;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .contenedor-padre-detalle-del-servicio{
+        position:relative; 
+        z-index:2;
+        padding: 200px 30px;
+    }
+}

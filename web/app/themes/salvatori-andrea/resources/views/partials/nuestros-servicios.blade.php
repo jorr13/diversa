@@ -17,8 +17,6 @@
     @foreach(array_slice($category_loop,1,4) as $category)
     <div class=" column is-one-quarter-desktop is-half-tablet">
 
-
-
         <div class="contenedor-tarjeta-nuestros-servicios" id="item-{{$category['id']}}">
             <div class="contenedor-imagen-tarjeta-nuestros-servicios">
                 <img src="{{$category['img']}}" alt="">
@@ -34,7 +32,7 @@
                     $posts = query_posts(array('post_type' => 'servicios', 'category_name' => $category['slug'] ) )
                     @endphp
                     @foreach($posts as $post)
-                    <li class="item">{{ get_the_title($post->ID)}}</li>
+                    <li class="item">{!! get_the_title($post->ID)!!}</li>
                     @endforeach
                     {{wp_reset_query()}}
                 </ul>

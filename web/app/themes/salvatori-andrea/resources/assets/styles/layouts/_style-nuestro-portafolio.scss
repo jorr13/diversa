@@ -1,7 +1,7 @@
 .contenedor-padre-portafolio-home{
     z-index: 1;
     position: relative;
-    padding: 0 0 0 8vw;
+    padding: 0 0 0 10vw;
     .contenedor-titulo-portafolio-home{
         h3{
             color: white;
@@ -38,9 +38,10 @@
             position: relative;
             .contenedor-tarjeta-grande{
                 position: absolute;
+                width: 95%;
                 .contenedor-imagen-destacada{
                     position: relative;
-                    min-height: 200px;
+                    min-height: 300px;
                     max-height: max-content;
                     height: 300px;
                     width: 75%;
@@ -82,18 +83,20 @@
                     }
                     a{
                         padding: 5px 12px ;
-                        font-size:10px;
+                        font-size:8px;
                         border-radius: 20px;
                         color: $morado;
                         background: white;
                         letter-spacing: 1px;
                         text-transform: uppercase;
+                        box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
                     }
                 }
             }
         }
         .contenedor-cuatro-imagen{
             position: relative;
+            padding: 0;
             .contenedor-hijo-cuatro-imagen{
                 position: relative;
 
@@ -116,6 +119,27 @@
                     }
                 }
             }
+        }
+    }
+    .contenedor-boton-portafolio{
+        position: relative;
+        width: 90%;
+        padding-bottom: 44px;
+        text-align: right;
+        margin-top: 35px;
+        background-position: center;
+
+        .portafolio-home{
+            background: white;
+            border-radius: 20px;
+            font-size: 8px;
+            color: $pupura;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 7px 20px;
+            position: relative;
+            box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
         }
     }
     @media only screen and (max-width: 768px) {

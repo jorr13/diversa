@@ -11036,6 +11036,44 @@ Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, c
         }
     });
 
+    $('#quienesomos').click(function (e) {
+        e.preventDefault();
+        $('#quien, #enque, #nuestra').fadeOut();
+        $('#quien').fadeIn();
+    });
+    $('#creemos').click(function (e) {
+        e.preventDefault();
+        $('#quien, #enque, #nuestra').fadeOut();
+        $('#enque').fadeIn();
+    });
+    $('#filosofia').click(function (e) {
+        e.preventDefault();
+        $('#quien, #enque, #nuestra').fadeOut();
+        $('#nuestra').fadeIn();
+    });
+
+    $('#title-left').click(function (e) {
+        e.preventDefault();
+        $('#content-left, #content-center, #content-right').fadeOut();
+        $('#title-left').removeClass('contenedor-clase-activa');
+        $('#title-center,#title-right').addClass('contenedor-clase-activa');
+        $('#content-left').fadeIn();
+    });
+    $('#title-center').click(function (e) {
+        e.preventDefault();
+        $('#content-left, #content-center, #content-right').fadeOut();
+        $('#title-center').removeClass('contenedor-clase-activa');
+        $('#title-left, #title-right').addClass('contenedor-clase-activa');
+        $('#content-center').fadeIn();
+    });
+    $('#title-right').click(function (e) {
+        e.preventDefault();
+        $('#content-left, #content-center, #content-right').fadeOut();
+        $('#title-right').removeClass('contenedor-clase-activa');
+        $('#title-center,#title-left').addClass('contenedor-clase-activa');
+        $('#content-right').fadeIn();
+    });
+
     $('.menu-item a').addClass('a-menu');
     var valorMenu = $('.a-menu'),
         i,
@@ -11056,21 +11094,6 @@ Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, c
     }
     function hideImg() {
         $('.imagen-menu-svg').fadeOut();
-    }
-
-    var x = $('.contenedor-imagen-peque'),
-        i;
-    if (x) {
-        x[0].addEventListener('click', hideDes);
-        x[0].click();
-    }
-
-    $('.contenedor-imagen-peque').click(hideDes);
-
-    function hideDes() {
-        $('.contenedor-tarjeta-grande').hide();
-        i = $(this).attr('id');
-        $('.' + i).fadeIn();
     }
 
     window.addEventListener('scroll', function () {
@@ -11097,7 +11120,7 @@ Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, c
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'http://localhost:3000/json/menu.json'
+        path: location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + '/json/menu.json'
     });
 
     setTimeout(function () {
@@ -11109,6 +11132,21 @@ Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, c
             document.querySelector('#content-svg-menu svg').style.cssText = "width: auto; height: 100%;";
         }, 500);
     }, 2000);
+
+    var x = $('.contenedor-imagen-peque'),
+        i;
+    if (x) {
+        x[0].addEventListener('click', hideDes);
+        x[0].click();
+    }
+
+    $('.contenedor-imagen-peque').click(hideDes);
+
+    function hideDes() {
+        $('.contenedor-tarjeta-grande').hide();
+        i = $(this).attr('id');
+        $('.' + i).fadeIn();
+    }
 });
 
 /***/ }),
@@ -14788,16 +14826,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("nav", { staticClass: "pagination" }, [
-    _c("span", { staticClass: "page-stats" }, [
-      _vm._v(
-        _vm._s(_vm.pagination.from) +
-          " - " +
-          _vm._s(_vm.pagination.to) +
-          " of " +
-          _vm._s(_vm.pagination.total)
-      )
-    ]),
-    _vm._v(" "),
     _vm.pagination.prevPage
       ? _c(
           "a",
@@ -14809,7 +14837,12 @@ var render = function() {
               }
             }
           },
-          [_vm._v("\n        Prev\n    ")]
+          [
+            _c("i", {
+              staticClass: "favi fa chevron-left",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
         )
       : _c(
           "a",
@@ -14817,8 +14850,23 @@ var render = function() {
             staticClass: "button is-small pagination-previous",
             attrs: { disabled: "" }
           },
-          [_vm._v("\n        Prev\n    ")]
+          [
+            _c("i", {
+              staticClass: "favi fa chevron-left",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
         ),
+    _vm._v(" "),
+    _c("span", { staticClass: "page-stats" }, [
+      _vm._v(
+        _vm._s(_vm.pagination.from) +
+          " - " +
+          _vm._s(_vm.pagination.to) +
+          " de " +
+          _vm._s(_vm.pagination.total)
+      )
+    ]),
     _vm._v(" "),
     _vm.pagination.nextPage
       ? _c(
@@ -14831,7 +14879,12 @@ var render = function() {
               }
             }
           },
-          [_vm._v("\n        Next\n    ")]
+          [
+            _c("i", {
+              staticClass: "favi fa chevron-right",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
         )
       : _c(
           "a",
@@ -14839,7 +14892,12 @@ var render = function() {
             staticClass: "button is-small pagination-next",
             attrs: { disabled: "" }
           },
-          [_vm._v("\n        Next\n    ")]
+          [
+            _c("i", {
+              staticClass: "favi fa chevron-right",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
         )
   ])
 }
@@ -15013,16 +15071,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     //To check these methods, check global.js
@@ -15042,8 +15090,6 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("h2", { staticClass: "title" }, [_vm._v("estos son los posts")]),
-      _vm._v(" "),
       _c(
         "div",
         { staticClass: "posts-container columns is-mobile is-multiline" },
@@ -15053,27 +15099,22 @@ var render = function() {
             {
               key: index,
               staticClass:
-                "column is-3-desktop is-6-mobile post-item  animate fadeIn"
+                "column is-one-quarter-desktop is-half-tablet   animate fadeIn"
             },
             [
-              _c("div", { staticClass: "card" }, [
-                _c("img", { attrs: { src: post.fimg_url } }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-content" }, [
-                  _c("h2", { staticClass: "title" }, [
-                    _vm._v(_vm._s(post.title.rendered))
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("footer", { staticClass: "card-footer" }, [
-                  _c("p", { staticClass: "card-footer-item" }, [
-                    _c("span", [
-                      _vm._v("\n                           Read "),
-                      _c("a", { attrs: { href: post.link } }, [_vm._v("More")])
+              _c("div", { staticClass: "contenedor-papa-card post-item" }, [
+                _c("div", { staticClass: "card-posts" }, [
+                  _c("div", { staticClass: "contenido-tarjeta" }, [
+                    _c("h2", { staticClass: "title-posts" }, [
+                      _vm._v(_vm._s(post.title.rendered))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(post.excerpt.rendered))]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: post.link } }, [
+                      _vm._v("leer más")
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(0, true)
+                  ])
                 ])
               ])
             ]
@@ -15098,19 +15139,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "card-footer-item" }, [
-      _c("span", [
-        _vm._v("\n                            Share on "),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Facebook")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

@@ -55,7 +55,44 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
         }
         });
 
+        $('#quienesomos').click(function (e) { 
+            e.preventDefault();
+            $('#quien, #enque, #nuestra').fadeOut();
+            $('#quien').fadeIn();        
+          });
+          $('#creemos').click(function (e) { 
+            e.preventDefault();
+           $('#quien, #enque, #nuestra').fadeOut();
+            $('#enque').fadeIn();        
+          });
+          $('#filosofia').click(function (e) { 
+            e.preventDefault();
+            $('#quien, #enque, #nuestra').fadeOut();
+            $('#nuestra').fadeIn();        
+          });
 
+          
+        $('#title-left').click(function (e) { 
+            e.preventDefault();
+            $('#content-left, #content-center, #content-right').fadeOut();
+            $('#title-left').removeClass('contenedor-clase-activa');
+            $('#title-center,#title-right').addClass('contenedor-clase-activa');
+            $('#content-left').fadeIn();        
+          });
+          $('#title-center').click(function (e) { 
+            e.preventDefault();
+            $('#content-left, #content-center, #content-right').fadeOut();
+            $('#title-center').removeClass('contenedor-clase-activa');
+            $('#title-left, #title-right').addClass('contenedor-clase-activa');
+            $('#content-center').fadeIn();        
+          });
+          $('#title-right').click(function (e) { 
+            e.preventDefault();
+            $('#content-left, #content-center, #content-right').fadeOut();
+            $('#title-right').removeClass('contenedor-clase-activa');
+            $('#title-center,#title-left').addClass('contenedor-clase-activa');
+            $('#content-right').fadeIn();        
+          });
 
 
         $('.menu-item a').addClass('a-menu');
@@ -80,19 +117,6 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
 
 
 
-       var x = $('.contenedor-imagen-peque'), i;
-       if(x){
-               x[0].addEventListener('click', hideDes);
-               x[0].click();
-       }
-
-       $('.contenedor-imagen-peque').click(hideDes);
-
-       function hideDes(){
-           $('.contenedor-tarjeta-grande').hide();
-           i = $(this).attr('id');
-           $('.' + i).fadeIn();
-       }
 
 
         window.addEventListener('scroll', function() {
@@ -119,7 +143,7 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: 'http://localhost:3000/json/menu.json'
+            path: location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '') + '/json/menu.json'
             });
 
             setTimeout(() => {
@@ -131,4 +155,19 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
                 document.querySelector('#content-svg-menu svg').style.cssText ="width: auto; height: 100%;";
             }, 500)
             }, 2000)
+
+            var x = $('.contenedor-imagen-peque'), i;
+            if(x){
+                    x[0].addEventListener('click', hideDes);
+                    x[0].click();
+            }
+     
+            $('.contenedor-imagen-peque').click(hideDes);
+     
+            function hideDes(){
+                $('.contenedor-tarjeta-grande').hide();
+                i = $(this).attr('id');
+                $('.' + i).fadeIn();
+            }
+
     });

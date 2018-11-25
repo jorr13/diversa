@@ -1,3 +1,4 @@
+
 <nav role="navigation" aria-label="main navigation" >
     <a role="button" class="navbar-burger boton-menu" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
@@ -41,7 +42,10 @@
         <i class="favi fa fa-arrow-up" aria-hidden="true"></i>
     </a>
 </nav>
-
+<div class="imagensvg">
+    <img class="parallax" src="{{ home_url('app/uploads/2018/10/bg.svg') }}" alt="">
+</div>
 <div class="degradado" ></div>
+
 
 

@@ -1,0 +1,117 @@
+.contenedor-padre-tarjetas-nuestros-servicios{
+    position: relative;
+    padding: 0px 7vw 50px 7vw;
+    z-index: 2;
+
+
+    .contenedor-tarjeta-nuestros-servicios{
+        padding: 20px;
+        border-radius: 20px;
+        position: relative;
+        transition: 0.5s;
+        margin: 5px;
+
+        &:hover{
+            transition: 0.5s;
+            transform: scale(1.03);
+            &::after{
+                height: 100%;
+                transition: 0.5s
+            }
+            .contenedor-titulos-tarjeta-servicios{
+
+                .titulo-servicio-detalle{
+                    &::after{
+                        transition: 0.5s;
+                        background: $azul !important;
+                    }
+                }
+    
+                p{
+                    color: $azul;
+                    transition: 0.5s;
+    
+                }
+            }
+
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            background: $morado;
+            height: 0%;
+            left: 0;
+            border-radius: 20px;
+            transition: 0.5s;
+            z-index: -1;  
+        }
+
+        .contenedor-imagen-tarjeta-nuestros-servicios{
+            width: 40px;
+            height: 40px;
+            position: relative;
+            z-index: 99;
+        }
+        .contenedor-titulos-tarjeta-servicios{
+            .titulo-servicio-detalle{
+                font-size: 14px;
+                color: white;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 15px 0;
+                z-index: 99;
+                letter-spacing: 2px;
+                position: relative;
+                height: 90px;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 8px;
+                    width: 60px;
+                    height: 4px;
+                    background: white;
+                    transition: 0.5s;
+                }
+            }
+            p{
+                transition: 0.5s;
+                color: white;
+                letter-spacing: 1px;
+                font-size: 12px;
+                padding-bottom: 15px;
+                height: 80px;
+                z-index: 99;
+                position: relative;
+
+
+            }
+        }
+        .contenedor-descrip-tarjeta-nuestros-servicios{
+            color: white;
+            font-size: 15px;
+            transition: 0.5s;
+            ul{
+                padding-bottom: 15px;
+                z-index: 99;
+                font-size: 12px;
+                height: 100px;
+                font-weight: 600;
+            }
+        }
+        a{
+            position: relative;
+            background: #35b4df;
+            border-radius: 20px;
+            font-size: 10px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 7px 20px;
+            box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
+        }
+    }
+}

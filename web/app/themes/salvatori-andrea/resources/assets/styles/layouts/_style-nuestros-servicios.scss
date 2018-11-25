@@ -1,7 +1,7 @@
 .contenedor-padre-nuestros-servicios{
     z-index: 1;
     position: relative;
-    padding: 0 0 0 8vw;
+    padding: 0 0 0 10vw;
     .contenedor-titulo-nuestros-servicios{
         h3{
             color: white;
@@ -33,8 +33,8 @@
     }
     .contenedor-padre-tarjetas-nuestros-servicios{
         position: relative;
-        margin-left: -27px;
-        padding: 0px 80px 20px 0;
+        margin-left: -38px;
+        padding: 0px 92px 20px 0;
 
         .contenedor-tarjeta-nuestros-servicios{
             padding: 20px;
@@ -90,6 +90,7 @@
                     text-transform: uppercase;
                     padding: 15px 0;
                     z-index: 99;
+                    letter-spacing: 2px;
                 }
                 p{
                     color: white;
@@ -121,6 +122,7 @@
                     z-index: 99;
                     font-size: 12px;
                     height: 100px;
+                    font-weight: 600;
                 }
             }
             a{
@@ -132,25 +134,27 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 padding: 7px 20px;
+                box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
             }
         }
     }
     .contenedor-boton-video{
         position: relative;
-        width: 94%;
+        width: 90%;
         padding-bottom: 44px;
         text-align: right;
 
         .vermasservicios{
             background: white;
             border-radius: 20px;
-            font-size: 10px;
+            font-size: 8px;
             color: $pupura;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             padding: 7px 20px;
             position: relative;
+            box-shadow: 1px 4px 17px rgba(0, 0, 0, .2);
         }
     }
     @media only screen and (max-width: 768px) {
