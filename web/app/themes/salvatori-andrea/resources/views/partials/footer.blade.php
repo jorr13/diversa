@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer animate fadeInUp">
   <div class="padrefooter columns is-multiline ">
     <div class="sabermas column is-3">
       <div class="descrip-sabermas">
@@ -11,22 +11,22 @@
           @endif
       </div>
 
-      <a href="#">Saber más</a>
+      <a href="/nosotros/">Saber más</a>
     </div>
 
     <div class="menufooter1 column is-1">
       <ul>
-        <li>Nosotros</li>
-        <li>Servicios</li>
-        <li>Portafolio</li>
+        <li> <a href="/nosotros/">Nosotros</a> </li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/nuestro-portafolio/">Portafolio</a></li>
       </ul>
     </div>
 
     <div class="menufooter2 column is-2">
       <ul>
-        <li>Blog</li>
-        <li>Condiciones de servicios</li>
-        <li>información de privacidad</li>
+        <li><a href="/nuestro-blog/">Blog</a></li>
+        <li><a href="/condiciones-de-servicios/">Condiciones de servicios</a></li>
+        <li><a href="/politica-privacidad/">información de privacidad</a></li>
       </ul>
     </div>
 
@@ -39,7 +39,7 @@
         @endwhile 
         @else      
         @endif
-        <a href="#">Contáctanos</a>
+        <a href="/contactanos/">Contáctanos</a>
 
     </div>
   </div>

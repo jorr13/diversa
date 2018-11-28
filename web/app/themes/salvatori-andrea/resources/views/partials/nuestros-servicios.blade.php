@@ -1,4 +1,4 @@
-<div class="contenedor-padre-nuestros-servicios">
+<div class="contenedor-padre-nuestros-servicios animate fadeInUp">
 
 
         <div class="contenedor-titulo-nuestros-servicios">
@@ -45,7 +45,7 @@
     
 </div>
 <div class="contenedor-boton-video">
-    <a href="#" class="vermasservicios">ver más servicios</a>
+    <a href="/servicios/" class="vermasservicios">ver más servicios</a>
 </div>
 
 </div>

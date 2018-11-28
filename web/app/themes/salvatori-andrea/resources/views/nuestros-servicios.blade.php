@@ -6,21 +6,23 @@
 
 @section('content')
 @while(have_posts()) @php the_post() @endphp
-@include('partials.content-page')
+
 @endwhile
 <div class="contenedor-padre-servicios">
     <div class="contenedor-titulo-pagina">
         <h2>{!! App::title() !!}</h2>
+        
     </div>
-    <div class="contenedor-padre-servicio columns is-multiline ">
+    <div class="contenedor-extracto">
+            <p>	{!!apply_filters( 'the_excerpt',get_the_excerpt($post->ID) )!!}</p>
+    </div>
+    <div class="contenedor-padre-servicio columns is-multiline animate fadeInUp ">
         <div class="contenedor-porque-trabajar column is-6">
-            <h3>¿Por qué trabajar con nosotros?</h3>
-            <p>Valoramos la información, perspectivas e intereses de nuestros clientes, en esta fase nos dedicamos a escucharlos y conocerlos. Se define el contenido y estructura hasta el momento trabajada por los clientes. Los asesoramos, definimos target, casos de éxito y competencias. 
-                    Establecemos presupuestos, canales y nichos de mercado potenciales; aclaramos el panorama de trabajo de nuestros clientes con la agencia para mejorar la eficiencia y calidad del producto. 
-            </p>
-            <a href="#">Contáctanos</a>
+                {!! apply_filters( 'the_content', get_the_content($post->ID) )!!}
+
+            <a href="/contactanos/">Contáctanos</a>
         </div>
-        <div class="contenedor-de-servicios column is-6">
+        <div class="contenedor-de-servicios column is-6 animate fadeInUp">
             <div class="contenedor-padre-tarjetas-page-servicios columns is-multiline">
                 @foreach(array_slice($category_loop,1,4) as $category)
                 <div class="column is-6-desktop is-12-tablet">
@@ -39,7 +41,7 @@
                                 $posts = query_posts(array('post_type' => 'servicios', 'category_name' => $category['slug'] ) )
                                 @endphp
                                 @foreach($posts as $post)
-                                <li class="item">{{ get_the_title($post->ID)}}</li>
+                                <li class="item">{!! get_the_title($post->ID)!!}</li>
                                 @endforeach
                                 {{wp_reset_query()}}
                             </ul>

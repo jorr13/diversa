@@ -79,6 +79,7 @@ class App extends Controller
     {
         $page = get_posts([
             'post_type' => 'page',
+            'numberposts' => -1,
         ]);
     
         return array_map(function ($post) {
@@ -111,7 +112,28 @@ class App extends Controller
         }, $proyecto);
     }
 
-////////////////
+    function servicioLoop()
+    {
+        $servi = get_posts([
+            'page' => 'servicios',
+        ]);
+ 
+        return array_map(function ($post) {
+            return [
+                'thumbnail' => get_the_post_thumbnail_url($post->ID, 'large'),
+                'title' => get_the_title($post->ID),
+                'resumen' =>apply_filters( 'the_excerpt',get_the_excerpt($post->ID) ),
+                'link' => get_permalink($post->ID),
+                'categories' => wp_list_pluck( get_the_category($post->ID),'name'),
+                'content' => apply_filters( 'the_content', get_the_content($post->ID) ),
+                'tags' => get_tags($post->ID),
+                'id' => $post->ID,
+                'categori-name' => get_the_category( $post->ID ),
+            ];
+        }, $servi);
+    }
+
+    ////////////////
     function categoryLoop()
     {
         $category = get_terms([
@@ -130,11 +152,7 @@ class App extends Controller
             ];
         }, $category);
     }
-
-
-
-
-
-
 }
 add_post_type_support( 'page', 'excerpt' );
+
+

@@ -7,6 +7,7 @@ Vue.prototype.$appUrl = location.protocol+'//'+location.hostname+(location.port 
 import pagination from './components/pagination.vue'
 
 Vue.mixin({
+
     mounted() {
         this.getPosts(); 
     },

@@ -12,6 +12,9 @@
     <div class="contenedor-titulo-pagina">
         <h2>{!! App::title() !!}</h2>
     </div>
+    <div class="contenedor-extracto">
+            <p>	{!!apply_filters( 'the_excerpt',get_the_excerpt($post->ID) )!!}</p>
+    </div>
 
     <div class="contenedor-los-portafolio">
         <div class="contenedor-proyecto-seleccionado columns is-multiline" >

@@ -26,24 +26,26 @@
             .contenedor-opciones-nosotros{
                position: relative;
                .contenedor-opcion{
-                   position: relative;
-                   text-align: center;
-                   border-bottom: 2px solid rgba(255,255,255,.5);
-                   color: rgba(255,255,255,.5);
-                   transition: 0.5s;
-                   span{
-                       color:rgba(255,255,255,.5);
-                       font-size: 15px;
-                       letter-spacing: 1px;
-                       font-weight: 500;
-                       transition: 0.5s;
+                    position: relative;
+                    text-align: center;
+                    border-bottom: 2px solid white;
+                    color: white;
+                    transition: 0.5s;
+
+                    span{
+                        color: white;
+                        font-size: 15px;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        transition: 0.5s;
                     }
                     &:hover{
-                        border-bottom: 2px solid white;
+                        border-bottom: 2px solid white !important;
                         cursor: pointer;
                         transition: 0.5s;
+
                         span{
-                            color:white;
+                            color:white !important;
                             transition: 0.5s;
                         }
                     }
@@ -51,24 +53,19 @@
             }
             .contenedor-informacion-opcion{
                 position: absolute;
-                .contenedor-imagen{
-                    padding: 70px 150px;
-                    position: relative;
-                }
-                .contenedor-informacion{
-                    color: white;
-                    padding: 70px 20px;
                     h3{
                         letter-spacing: 1px;
                         position: relative;
                         font-weight: 600;
-                        padding-bottom: 15px;
                         font-size: 20px;
+                        color:white;
+                        padding-top: 25px;
                     }
                     p{
                         font-size: 12px;
+                        color:white;
+                        padding-top: 25px;
                     }
-                }
             } 
         }
     }
@@ -282,7 +279,7 @@
     }
     @media only screen and (max-width: 768px) {
         .contenedor-abuelo-opcion{
-            height: 400px;
+            height: 500px;
             .contenedor-papa-opcion{
                 .contenedor-informacion-opcion{
                     .contenedor-imagen{
@@ -311,5 +308,54 @@
         position: relative;
         z-index: 2;
         padding: 202px 8vw;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .contenedor-padre-nosotros {
+        .carousel{
+            .carousel-container{
+                .carousel-item{
+                    .contenedor-tarjeta-nuestro-equipo{
+                        .contenedor-titulos-tarjeta-nuestro-equipo{
+                            h4{
+                                height: 70px;
+                            }
+                            p{
+                                height: 130px; 
+                            } 
+                        } 
+                    }  
+                }  
+            } 
+        }
+        .contenedor-abuelo-opcion{
+            .contenedor-informacion-opcion{
+                p{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        } 
+    }
+}
+.contenedor-clase-inactiva{
+    position: relative;
+    transition: 0.5s;
+    border-bottom: 2px solid rgba(255,255,255,.5) !important;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        border-radius: 40px;
+        bottom: -4px;
+        width: 6px;
+        height: 6px;
+        background: white;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+    span{
+        color:rgba(255,255,255,.5) !important;
     }
 }

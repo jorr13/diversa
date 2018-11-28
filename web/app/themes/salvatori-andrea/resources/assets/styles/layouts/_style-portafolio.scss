@@ -16,13 +16,25 @@
             font-weight: 600;
         }
     }
+    .contenedor-extracto{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 30px;
+        p{
+            color: white;
+            letter-spacing: 1px;
+            font-size: 15px;
+            padding-bottom: 30px;
+        }
+    }
     .contenedor-los-portafolio{
         .contenedor-proyecto-seleccionado{
             .contenedor-tarjeta-grande-portafolio{
                 .contenedor-imagen-destacada{
                     &:hover{
                         .contenedor-info-proyecto{
-                            opacity: 0.8;
+                            opacity: 1;
                             transition: 0.5s;
                         }
                     }

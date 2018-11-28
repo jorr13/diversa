@@ -1,4 +1,4 @@
-<div class="contenedor-padre-nosotros-home">
+<div class="contenedor-padre-nosotros-home animate fadeInUp">
 
 
     <div class="contenedor-titulo-nosotros-home">
@@ -34,12 +34,9 @@
             @endwhile 
             @else      
             @endif
-
-      
-
         </div>
 
-        <div class="carousel-navigation is-overlay">
+        <div class="carousel-navigation is-centered">
             <div class="carousel-nav-left">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </div>
@@ -49,6 +46,6 @@
         </div>
     </div>
     <div class="contenedor-boton-conocenos">
-        <a href="#" class="conocenos-home">conócenos</a>
+        <a href="/nosotros/" class="conocenos-home">conócenos</a>
     </div>
 </div>

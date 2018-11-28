@@ -12,17 +12,18 @@
                     @while (have_rows('contenido_del_servicio', $post->ID))@php the_row() @endphp
                         <div class="contenedor-imagen-muestra-proyecto column is-12">
                             <img src="{{ get_sub_field('imagen_a_mostrar') }}" alt="">
+                            @if(get_sub_field('titulo_de_la_imagen'))
+                            <div class="contenedor-info-proyecto column is-12">
+                                <h3>{{ get_sub_field('titulo_de_la_imagen') }}</h3>
+                            </div>
+                            @endif
+                            @if(get_sub_field('descripcion_de_la_imagen'))
+                            <div class="contenedor-info-proyecto-parrafo column is-12">
+                                <p>{{ get_sub_field('descripcion_de_la_imagen') }}</p>
+                            </div>
+                            @endif
                         </div>
-                        @if(get_sub_field('titulo_de_la_imagen'))
-                        <div class="contenedor-info-proyecto column is-12">
-                            <h3>{{ get_sub_field('titulo_de_la_imagen') }}</h3>
-                        </div>
-                        @endif
-                        @if(get_sub_field('descripcion_de_la_imagen'))
-                        <div class="contenedor-info-proyecto-parrafo column is-12">
-                            <p>{{ get_sub_field('descripcion_de_la_imagen') }}</p>
-                        </div>
-                        @endif
+      
                     @endwhile 
                 @else      
                 @endif

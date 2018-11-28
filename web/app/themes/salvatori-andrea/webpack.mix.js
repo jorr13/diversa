@@ -23,8 +23,59 @@ mix.setPublicPath('dist')
      processCssUrls: false,
      postCss: [ require('tailwindcss')('./tailwind.js') ],
    })
-   .purgeCss()
-
+   .purgeCss({
+    whitelist: [
+      "nav",
+      "menu-animado",
+      "menuexpandido",
+      "border",
+      "contenedor-menu",
+      "menu-menu-1-container",
+      "sage-menu",
+      "menu-item-opacity",
+      "menu-item",
+      "contenedor-papa-imagen-svg",
+      "contenedor-svg-menu",
+      "contenedor-img-menu",
+      " menu-item-opacity",
+      "comment",
+      "comment-body",
+      "comment-meta",
+      "comment-author",
+      "fn",
+      "says",
+      "comment-metadata",
+      "reply",
+      "children",
+      "comment-respond",
+      "comment-reply-title",
+      "comment-form",
+      "comment-notes",
+      "comment-form-comment",
+      "comment-form-author",
+      "comment-form-email",
+      "comment-form-url",
+      "form-submit",
+      "a",
+      "type-post",  
+    ],
+    whitelistPatterns: [
+      /^search(-.*)?$/,
+      /^(.*)-template(-.*)?$/,
+      /^(.*)?-?single(-.*)?$/,
+      /^postid-(.*)?$/,
+      /^attachmentid-(.*)?$/,
+      /^attachment(-.*)?$/,
+      /^page(-.*)?$/,
+      /^(post-type-)?archive(-.*)?$/,
+      /^author(-.*)?$/,
+      /^category(-.*)?$/,
+      /^tag(-.*)?$/,
+      /^tax-(.*)?$/,
+      /^term-(.*)?$/,
+      /^(.*)?-?paged(-.*)?$/
+    ]
+  })
 if (mix.inProduction()) {
   mix.version()
 }

@@ -7,7 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $post = new FieldsBuilder('Pestañas de nosotros');
 
 $post
-    ->setLocation('page', '==', 'nosotros');
+    ->setLocation('page', '==', 34);
   
 $post
     ->addTab('Titulo Izquierda', ['placement' => 'top'])

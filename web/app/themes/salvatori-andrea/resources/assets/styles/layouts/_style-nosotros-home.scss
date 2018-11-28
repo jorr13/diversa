@@ -37,11 +37,14 @@
     }
 
     .carousel{
-        width: 82%;
+        width: 85%;
         /* margin: 0px auto; */
-        margin-left: 101px;
+        margin-left: 112px;
 
-        .carousel-navigation{
+        .carousel-navigation.is-centered{
+            justify-content: right !important;
+            padding-bottom: 6px !important;
+
             .carousel-nav-left{
                 border-radius: 20px;
                 left: 15px;
@@ -56,7 +59,7 @@
         }
         .carousel-container{
             .carousel-item{
-                flex-basis: 289px !important;
+                flex-basis: 282px !important;
                 .contenedor-tarjeta-nuestro-equipo{
                     padding: 20px;
                     border-radius: 20px;

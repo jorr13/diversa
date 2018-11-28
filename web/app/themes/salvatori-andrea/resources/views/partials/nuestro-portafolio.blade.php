@@ -1,4 +1,4 @@
-<div class="contenedor-padre-portafolio-home">
+<div class="contenedor-padre-portafolio-home animate fadeInUp">
     <div class="contenedor-titulo-portafolio-home">
             @if(have_rows('proyectos_exitoso', 'options'))
             {{-- loop through the rows of data --}}
@@ -39,6 +39,6 @@
         </div>
     </div>
     <div class="contenedor-boton-portafolio">
-        <a href="#" class="portafolio-home">Ir a nuestro portafolio</a>
+        <a href="/nuestro-portafolio/" class="portafolio-home">Ir a nuestro portafolio</a>
     </div> 
 </div>

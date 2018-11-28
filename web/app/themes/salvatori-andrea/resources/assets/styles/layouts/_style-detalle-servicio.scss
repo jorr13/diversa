@@ -29,22 +29,22 @@
                .contenedor-opcion-detalle-servicio{
                    position: relative;
                    text-align: center;
-                   border-bottom: 2px solid rgba(255,255,255,.5);
-                   color: rgba(255,255,255,.5);
+                   border-bottom: 2px solid white;
+                   color: white;
                    transition: 0.5s;
                    span{
-                       color:rgba(255,255,255,.5);
+                   color: white;
                        font-size: 15px;
                        letter-spacing: 1px;
                        font-weight: 500;
                        transition: 0.5s;
                     }
                     &:hover{
-                        border-bottom: 2px solid white;
+                        border-bottom: 2px solid white !important;
                         cursor: pointer;
                         transition: 0.5s;
                         span{
-                            color:white;
+                            color:white !important;
                             transition: 0.5s;
                         }
                     }
@@ -125,7 +125,7 @@
             background: $azul;
             border-radius: 20px;
             font-size: 8px;
-            color: white;
+            color:white;
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 7px 20px;
@@ -136,6 +136,7 @@
 .contenedor-clase-activa{
     position: relative;
     transition: 0.5s;
+    border-bottom: 2px solid rgba(255,255,255,.5) !important;
     &::after{
         content: "";
         position: absolute;
@@ -147,6 +148,9 @@
         background: white;
         -webkit-transition: .5s;
         transition: .5s;
+    }
+    span{
+        color:rgba(255,255,255,.5) !important;
     }
 }
 @media only screen and (max-width: 768px) {

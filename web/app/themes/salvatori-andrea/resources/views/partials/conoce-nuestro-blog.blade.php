@@ -1,4 +1,4 @@
-<div class="contenedorpadre-nuestro-blog">
+<div class="contenedorpadre-nuestro-blog animate fadeInUp">
     <div class="contenedor-titulo-nuestro-blog">
             @if(have_rows('nuestro-blog', 'options'))
             {{-- loop through the rows of data --}}
@@ -25,6 +25,6 @@
         </div>
     </div>
     <div class="contenedor-boton-nuestro-blog">
-        <a href="">Ir a nuestro blog</a>
+        <a href="/nuestro-blog/">Ir a nuestro blog</a>
     </div>
 </div>

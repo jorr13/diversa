@@ -1,4 +1,4 @@
-<div class=" column is-one-quarter-desktop is-half-tablet">
+<div class=" column is-one-quarter-desktop is-half-tablet animate fadeInUp">
     <div class="contenedor-tarjeta-nuestros-servicios" >
         @php
         global $post;
@@ -8,7 +8,7 @@
         </div>
 
         <div class="contenedor-titulos-tarjeta-servicios">
-            <h4 class="titulo-servicio-detalle">{{ get_the_title($post->ID)}}</h4>
+            <h4 class="titulo-servicio-detalle">{!! get_the_title($post->ID) !!}</h4>
             <p>{{ apply_filters( 'the_excerpt',get_the_excerpt($post->ID) ) }}</p>
         </div>
 

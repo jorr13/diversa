@@ -68,6 +68,8 @@
             border-color: transparent;
             background: $morado;
             margin-bottom: 20px;
+            color: white;
+            padding: 20px;
         }
         a{
             background: white;
@@ -148,13 +150,14 @@
                     textarea{
                         position:relative;
                         background: #090E22;
+                        color: white;
                     }
                 }
                 .contenedor-boton-formulario{
                     text-align: right;
                     a{
                         position: relative;
-                        background: #35b4df;
+                        background: $azul;
                         border-radius: 20px;
                         font-size: 10px;
                         color: white;
@@ -168,7 +171,9 @@
         }
     }
     @media only screen and (max-width: 765px) {
-
+        .contenedor-descrip-contacto{
+            width: 90%;
+        }
         .contenedor-formulario-contacto{
             .contenedor-formulario-iniciar-proyecto{
                 padding: 25px;
